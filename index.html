@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Sonic Screamer</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      cursor: pointer;
+    }
+    #sonicImage {
+      display: none;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <img id="sonicImage" src="sonic.png" alt="Sonic">
+  <audio id="screamSound" src="scream.mp3"></audio>
+
+  <script>
+    document.body.addEventListener('click', () => {
+      const image = document.getElementById('sonicImage');
+      const sound = document.getElementById('screamSound');
+      image.style.display = 'block';
+      sound.play();
+    });
+  </script>
+</body>
+</html>
